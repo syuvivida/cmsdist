@@ -10,7 +10,7 @@
 
 %define keep_archives true
 
-Source: https://github.com/protocolbuffers/protobuf/archive/v3.21.9.zip
+Source: https://github.com/protocolbuffers/protobuf/archive/v%{realversion}.zip
 #Patch0: protobuf-3.15-gcc10
 #Patch1: protobuf-std_iterator-8741
 Requires: zlib
@@ -20,7 +20,7 @@ BuildRequires: cmake ninja
 %setup -n %{n}-%{realversion}
 #%patch0 -p1
 #%patch1 -p1
-#sed -i -e 's|CMAKE_CXX_STANDARD  *11|CMAKE_CXX_STANDARD 17|' cmake/CMakeLists.txt
+sed -i -e 's|CMAKE_CXX_STANDARD  *11|CMAKE_CXX_STANDARD 17|' cmake/CMakeLists.txt
 %build
 rm -rf ../build
 mkdir ../build
