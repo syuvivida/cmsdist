@@ -2,7 +2,7 @@
 
 #Change the commit hash every time a new version is needed.
 %define commit 003102d8516b652d80e76d8ca1c4b5dc47c9015b
-%ddefine user iarspider
+%define user iarspider
 Source0: https://raw.githubusercontent.com/%user/cmssw/%commit/DQMServices/Components/bin/fastHadd.cc
 Source1: https://raw.githubusercontent.com/%user/cmssw/%commit/DQMServices/Core/src/ROOTFilePB.proto
 Requires: protobuf root abseil-cpp
