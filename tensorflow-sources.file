@@ -98,6 +98,7 @@ echo "wrapt:"                               >> ${TF_CMS_EXTERNALS}
 echo "gast_archive:"                        >> ${TF_CMS_EXTERNALS}
 echo "org_python_pypi_backports_weakref:"   >> ${TF_CMS_EXTERNALS}
 echo "opt_einsum_archive:"                  >> ${TF_CMS_EXTERNALS}
+echo "boringssl:"                           >> ${TF_CMS_EXTERNALS}
 
 export TF_SYSTEM_LIBS=$(cat ${TF_CMS_EXTERNALS} | sed 's|:.*||' | tr "\n" "," | sed 's|,*$||')
 
